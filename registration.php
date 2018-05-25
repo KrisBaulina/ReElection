@@ -180,8 +180,17 @@ if (count($_POST) > 0) {
                     <div class="form-group">
                         <label class="control-label" for="Patronymic">Отчество</label>
                         <input id="Patronymic" name="Patronymic" placeholder="Иванович"
-                               class="form-control input-md"
-                               type="text">
+                               class="form-control input-md" type="text"
+							   value="<?= htmlspecialchars($_POST['Patronymic']) ?>"
+                                    <?php
+                                    if (
+                                        isset($_POST['Patronymic']) &&
+                                        $_POST['Patronymic'] ==  $_POST['Patronymic']
+                                    ) {
+                                        echo $_POST['Patronymic'];
+                                    }
+                                    ?>
+						>
                     </div>
                 </div>
             </div>
