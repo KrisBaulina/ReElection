@@ -145,16 +145,34 @@ if (count($_POST) > 0) {
                     <!-- Text input-->
                     <div class="form-group">
                         <label class="control-label" for="LastName">Фамилия</label>
-                        <input id="LastName" name="LastName" placeholder="Иванов" class="form-control input-md"
-                               type="text">
+                        <input id="LastName" name="LastName" placeholder="Иванов" class="form-control input-md" type="text"
+						value="<?= htmlspecialchars($_POST['LastName']) ?>"
+                                    <?php
+                                    if (
+                                        isset($_POST['LastName']) &&
+                                        $_POST['LastName'] ==  $_POST['LastName']
+                                    ) {
+                                        echo $_POST['LastName'];
+                                    }
+                                    ?>
+                       >						
                     </div>
                 </div>
                 <!-- Text input-->
                 <div class="col-2">
                     <div class="form-group">
                         <label class="control-label" for="FirstName">Имя</label>
-                        <input id="FirstName" name="FirstName" placeholder="Иван" class="form-control input-md"
-                               type="text">
+                        <input id="FirstName" name="FirstName" placeholder="Иван" class="form-control input-md" type="text"
+						value="<?= htmlspecialchars($_POST['FirstName']) ?>"
+                                    <?php
+                                    if (
+                                        isset($_POST['FirstName']) &&
+                                        $_POST['FirstName'] ==  $_POST['FirstName']
+                                    ) {
+                                        echo $_POST['FirstName'];
+                                    }
+                                    ?>
+						>
                     </div>
                 </div>
                 <!-- Text input-->
