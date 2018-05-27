@@ -31,7 +31,7 @@ $db = require('connect.php');
             $query->execute(['id' => $_GET['id']]);
             $teacher = $query->fetch();
             echo "<h1>";
-            echo $teacher['lastName'] . " " . $teacher['FirstName'] . " " . $teacher['patronymic'];
+            echo htmlspecialchars($teacher['lastName']) . " " . htmlspecialchars($teacher['FirstName']) . " " . htmlspecialchars($teacher['patronymic']);
             echo "</h1>";
             echo "Последовательность действий:<br>";
             $date = date_create($teacher['ExpirationOfTheTerm']);
