@@ -152,7 +152,7 @@ if (count($_POST) > 0) {
                                         isset($_POST['LastName']) &&
                                         $_POST['LastName'] ==  $_POST['LastName']
                                     ) {
-                                        echo $_POST['LastName'];
+                                        echo htmlspecialchars($_POST['LastName']);
                                     }
                                     ?>
                        >						
@@ -169,7 +169,7 @@ if (count($_POST) > 0) {
                                         isset($_POST['FirstName']) &&
                                         $_POST['FirstName'] ==  $_POST['FirstName']
                                     ) {
-                                        echo $_POST['FirstName'];
+                                        echo htmlspecialchars($_POST['FirstName']);
                                     }
                                     ?>
 						>
@@ -187,7 +187,7 @@ if (count($_POST) > 0) {
                                         isset($_POST['Patronymic']) &&
                                         $_POST['Patronymic'] ==  $_POST['Patronymic']
                                     ) {
-                                        echo $_POST['Patronymic'];
+                                        echo htmlspecialchars($_POST['Patronymic']);
                                     }
                                     ?>
 						>
