@@ -146,15 +146,13 @@ if (count($_POST) > 0) {
                     <div class="form-group">
                         <label class="control-label" for="LastName">Фамилия</label>
                         <input id="LastName" name="LastName" placeholder="Иванов" class="form-control input-md" type="text"
-						value="<?= htmlspecialchars($_POST['LastName']) ?>"
-                                    <?php
+						value="<?php
                                     if (
-                                        isset($_POST['LastName']) &&
-                                        $_POST['LastName'] ==  $_POST['LastName']
+                                        isset($_POST['LastName'])										
                                     ) {
                                         echo htmlspecialchars($_POST['LastName']);
                                     }
-                                    ?>
+                                    ?>"                                    
                        >						
                     </div>
                 </div>
@@ -163,15 +161,13 @@ if (count($_POST) > 0) {
                     <div class="form-group">
                         <label class="control-label" for="FirstName">Имя</label>
                         <input id="FirstName" name="FirstName" placeholder="Иван" class="form-control input-md" type="text"
-						value="<?= htmlspecialchars($_POST['FirstName']) ?>"
-                                    <?php
+						value="<?php
                                     if (
-                                        isset($_POST['FirstName']) &&
-                                        $_POST['FirstName'] ==  $_POST['FirstName']
+                                        isset($_POST['FirstName']) 								
                                     ) {
                                         echo htmlspecialchars($_POST['FirstName']);
                                     }
-                                    ?>
+                                    ?>"                                    
 						>
                     </div>
                 </div>
@@ -179,17 +175,15 @@ if (count($_POST) > 0) {
                 <div class="col-2">
                     <div class="form-group">
                         <label class="control-label" for="Patronymic">Отчество</label>
-                        <input id="Patronymic" name="Patronymic" placeholder="Иванович"
-                               class="form-control input-md" type="text"
-							   value="<?= htmlspecialchars($_POST['Patronymic']) ?>"
-                                    <?php
+                        <input id="Patronymic" name="Patronymic" 
+                               class="form-control input-md" placeholder="Иванович" type="text"
+							   value="<?php
                                     if (
-                                        isset($_POST['Patronymic']) &&
-                                        $_POST['Patronymic'] ==  $_POST['Patronymic']
+                                        isset($_POST['Patronymic'])                                       
                                     ) {
                                         echo htmlspecialchars($_POST['Patronymic']);
                                     }
-                                    ?>
+                                    ?>"                                    
 						>
                     </div>
                 </div>
